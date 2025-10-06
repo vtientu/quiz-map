@@ -6,10 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, Menu, X } from "lucide-react";
 import Image from "next/image";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function Header() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, logout } = useAuth();
 
   return (
     <header className="bg-white shadow-sm border-b">
@@ -67,19 +69,36 @@ export default function Header() {
             >
               Support
             </Button>
-            <Button
-              variant="outline"
-              className="border-red-800 text-red-800 hover:bg-red-50"
-              onClick={() => router.push("/login")}
-            >
-              Log in
-            </Button>
-            <Button
-              className="bg-red-800 hover:bg-red-900 text-white"
-              onClick={() => router.push("/register")}
-            >
-              Sign Up
-            </Button>
+            {user ? (
+              <>
+                <span className="text-sm text-gray-700">
+                  {user.displayName || user.email}
+                </span>
+                <Button
+                  variant="outline"
+                  className="border-red-800 text-red-800 hover:bg-red-50"
+                  onClick={() => logout()}
+                >
+                  Đăng xuất
+                </Button>
+              </>
+            ) : (
+              <>
+                <Button
+                  variant="outline"
+                  className="border-red-800 text-red-800 hover:bg-red-50"
+                  onClick={() => router.push("/login")}
+                >
+                  Log in
+                </Button>
+                <Button
+                  className="bg-red-800 hover:bg-red-900 text-white"
+                  onClick={() => router.push("/register")}
+                >
+                  Sign Up
+                </Button>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
