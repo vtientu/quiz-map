@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Search, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useAuth } from "@/hooks/useAuth";
+import Link from "next/link";
 
 export default function Header() {
   const router = useRouter();
@@ -29,12 +30,12 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="text-gray-700 hover:text-red-800 px-3 py-2 text-sm font-medium transition-colors"
             >
               Home
-            </a>
+            </Link>
             <a
               href="#"
               className="text-gray-700 hover:text-red-800 px-3 py-2 text-sm font-medium transition-colors"

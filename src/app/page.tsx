@@ -175,7 +175,11 @@ export default function Home() {
               <h2 className="text-2xl font-bold">Bản đồ Quiz Việt Nam</h2>
             </div>
             <MapVietnam
-              onSelectLocation={(loc) => setSelectedLocation(loc)}
+              onSelectLocation={(loc) => {
+                // Điều hướng sang trang riêng của địa điểm
+                setSelectedLocation(null);
+                window.location.href = `/location/${loc.id}`;
+              }}
               completedLocationIds={completedLocationIds}
             />
             {loading && (
@@ -189,18 +193,7 @@ export default function Home() {
 
       <Footer />
 
-      <QuizPanel
-        location={selectedLocation}
-        answeredQuestionIds={
-          selectedLocation ? answeredOf(selectedLocation.id) : []
-        }
-        previousAnswer={
-          selectedLocation ? previousAnswerOf(selectedLocation.id) : null
-        }
-        isLoggedIn={Boolean(user)}
-        onClose={() => setSelectedLocation(null)}
-        onSubmitAnswer={handleSubmitAnswer}
-      />
+      {/* Đã chuyển popup sang trang riêng */}
     </div>
   );
 }

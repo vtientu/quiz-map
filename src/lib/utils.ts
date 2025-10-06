@@ -10,6 +10,8 @@ export type RiddleQuestion = {
   id: string;
   prompt: string; // câu đố hiển thị
   answer: string; // đáp án chuẩn hóa, không dấu, không khoảng trắng, upper-case
+  label: string; // label hiển thị
+  video: string; // video url
 };
 
 export type MapLocation = {
@@ -31,6 +33,8 @@ export const VIETNAM_LOCATIONS: MapLocation[] = [
       id: "hn-riddle",
       prompt: "Tôi là 1 làng nghề ở miền bắc ......",
       answer: "BATTRANG",
+      label: "Làng Gốm Bát Tràng",
+      video: "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0",
     },
   },
   {
@@ -42,6 +46,8 @@ export const VIETNAM_LOCATIONS: MapLocation[] = [
       id: "hue-riddle",
       prompt: "Cố đô miền Trung ......",
       answer: "HUE",
+      label: "Làng Gốm Hương Thư",
+      video: "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0",
     },
   },
   {
@@ -53,6 +59,8 @@ export const VIETNAM_LOCATIONS: MapLocation[] = [
       id: "dn-riddle",
       prompt: "Thành phố bên sông Hàn ......",
       answer: "DANANG",
+      label: "Làng Gốm Đà Nẵng",
+      video: "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0",
     },
   },
   {
@@ -64,6 +72,8 @@ export const VIETNAM_LOCATIONS: MapLocation[] = [
       id: "hcm-riddle",
       prompt: "Thành phố phía Nam ......",
       answer: "SAIGON",
+      label: "Làng Gốm Sài Gòn",
+      video: "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0",
     },
   },
   {
@@ -75,6 +85,8 @@ export const VIETNAM_LOCATIONS: MapLocation[] = [
       id: "ct-riddle",
       prompt: "Tây Đô miền Tây ......",
       answer: "CANTHO",
+      label: "Làng Gốm Cần Thơ",
+      video: "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0",
     },
   },
 ];
