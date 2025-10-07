@@ -12,6 +12,9 @@ export type RiddleQuestion = {
   answer: string; // đáp án chuẩn hóa, không dấu, không khoảng trắng, upper-case
   label: string; // label hiển thị
   video: string; // video url
+  image: string; // image url
+  description: string; // description hiển thị
+  icon: string; // icon url
 };
 
 export type MapLocation = {
@@ -35,6 +38,9 @@ export const VIETNAM_LOCATIONS: MapLocation[] = [
       answer: "BATTRANG",
       label: "Làng Gốm Bát Tràng",
       video: "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0",
+      image: "/images/battrang.png",
+      description: "Làng Gốm Bát Tràng là một làng nghề ở miền bắc Việt Nam.",
+      icon: "/images/battrang.png",
     },
   },
   {
@@ -48,6 +54,9 @@ export const VIETNAM_LOCATIONS: MapLocation[] = [
       answer: "HUE",
       label: "Làng Gốm Hương Thư",
       video: "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0",
+      image: "/images/battrang.png",
+      description: "Làng Gốm Hương Thư là một làng nghề ở miền trung Việt Nam.",
+      icon: "/images/battrang.png",
     },
   },
   {
@@ -61,6 +70,9 @@ export const VIETNAM_LOCATIONS: MapLocation[] = [
       answer: "DANANG",
       label: "Làng Gốm Đà Nẵng",
       video: "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0",
+      image: "/images/battrang.png",
+      description: "Làng Gốm Đà Nẵng là một làng nghề ở miền trung Việt Nam.",
+      icon: "/images/battrang.png",
     },
   },
   {
@@ -74,6 +86,9 @@ export const VIETNAM_LOCATIONS: MapLocation[] = [
       answer: "SAIGON",
       label: "Làng Gốm Sài Gòn",
       video: "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0",
+      image: "/images/battrang.png",
+      description: "Làng Gốm Sài Gòn là một làng nghề ở miền Nam Việt Nam.",
+      icon: "/images/battrang.png",
     },
   },
   {
@@ -87,6 +102,9 @@ export const VIETNAM_LOCATIONS: MapLocation[] = [
       answer: "CANTHO",
       label: "Làng Gốm Cần Thơ",
       video: "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0",
+      image: "/images/battrang.png",
+      description: "Làng Gốm Cần Thơ là một làng nghề ở miền Nam Việt Nam.",
+      icon: "/images/battrang.png",
     },
   },
 ];

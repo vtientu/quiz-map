@@ -100,7 +100,7 @@ export default function MapVietnam({
             aria-label={loc.name}
             onClick={() => onSelectLocation?.(loc)}
             className={cn(
-              "-translate-x-1/2 -translate-y-1/2 rounded-full border-2 backdrop-blur px-2 py-1",
+              "-translate-x-1/2 -translate-y-1/2 rounded-full border-2 backdrop-blur px-2 py-1 cursor-pointer hover:scale-105 transition-transform duration-300",
               isDone
                 ? "bg-green-600/80 border-white text-white"
                 : "bg-red-700/80 border-white text-white hover:bg-red-800/90"

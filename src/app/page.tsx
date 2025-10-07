@@ -1,11 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MapVietnam from "@/components/MapVietnam";
-import QuizPanel from "@/components/QuizPanel";
 import { MapLocation, UserQuizProgress, emptyProgress } from "@/lib/utils";
 import { db } from "@/lib/firebase";
 import { useAuth } from "@/hooks/useAuth";
